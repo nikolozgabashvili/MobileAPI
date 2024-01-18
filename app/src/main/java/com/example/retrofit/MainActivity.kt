@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mobilelist: List<Mobile>
-    private lateinit var recyclerview:RecyclerView
+    private lateinit var recyclerview: RecyclerView
 
     private val BASE_URL = "https://run.mocky.io"
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,8 +23,6 @@ class MainActivity : AppCompatActivity() {
         getAllMobiles()
         recyclerview = findViewById(R.id.recyclerview)
         recyclerview.layoutManager = LinearLayoutManager(this)
-
-
 
 
     }
@@ -50,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<List<Mobile>>, t: Throwable) {
-                Log.e("failure","failure")
+                Log.e("failure", "failure")
             }
 
 
